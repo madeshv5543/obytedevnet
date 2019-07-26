@@ -13,19 +13,19 @@ exports.TOTAL_WHITEBYTES = 1e15;
 exports.MAJORITY_OF_WITNESSES = (exports.COUNT_WITNESSES%2===0) ? (exports.COUNT_WITNESSES/2+1) : Math.ceil(exports.COUNT_WITNESSES/2);
 exports.COUNT_MC_BALLS_FOR_PAID_WITNESSING = 100;
 
-exports.bTestnet = !!process.env.testnet;
+exports.bTestnet =true;
 console.log('===== testnet = ' + exports.bTestnet);
 
-exports.version = exports.bTestnet ? '2.0t' : '2.0';
-exports.alt = exports.bTestnet ? '2' : '1';
+exports.version =  '2.0';
+exports.alt =  '1';
 
-exports.supported_versions = exports.bTestnet ? ['1.0t', '2.0t'] : ['1.0', '2.0'];
-exports.versionWithoutTimestamp = exports.bTestnet ? '1.0t' : '1.0';
+exports.supported_versions =  ['1.0', '2.0'];
+exports.versionWithoutTimestamp =  '1.0';
 
 //exports.bTestnet = (exports.alt === '2' && exports.version === '1.0t');
 
-exports.GENESIS_UNIT = exports.bTestnet ? 'TvqutGPz3T4Cs6oiChxFlclY92M2MvCvfXR5/FETato=' : 'oj8yEksX9Ubq7lLc+p6F2uyHUuynugeVq4+ikT67X6E=';
-exports.BLACKBYTES_ASSET = exports.bTestnet ? 'LUQu5ik4WLfCrr8OwXezqBa+i3IlZLqxj2itQZQm8WY=' : 'qO2JsiuDMh/j+pqJYZw3u82O71WjCDf0vTNvsnntr8o=';
+exports.GENESIS_UNIT = '3gLI9EnI2xe3WJVPwRg8s4CB24ruetuddS0wYa2EI3c=';
+exports.BLACKBYTES_ASSET = 'pXDg6e1hgge/g/vCLjJZRgowm1W1EXpcHOISbP+j97A=';
 
 exports.HASH_LENGTH = 44;
 exports.PUBKEY_LENGTH = 44;
@@ -59,17 +59,17 @@ exports.TEXTCOIN_ASSET_CLAIM_MESSAGE_FEE = 209;
 exports.TEXTCOIN_ASSET_CLAIM_BASE_MSG_FEE = 158;
 exports.TEXTCOIN_PRIVATE_ASSET_CLAIM_MESSAGE_FEE = 99;
 
-exports.minCoreVersion = exports.bTestnet ? '0.2.95' : '0.2.0';
-exports.minCoreVersionForFullNodes = exports.bTestnet ? '0.2.95' : '0.2.94';
+exports.minCoreVersion =  '0.2.0';
+exports.minCoreVersionForFullNodes = '0.2.94';
 
 exports.lastBallStableInParentsUpgradeMci = 1300000;
-exports.witnessedLevelMustNotRetreatUpgradeMci = exports.bTestnet ? 684000 : 1400000;
-exports.spendUnconfirmedUpgradeMci = exports.bTestnet ? 589000 : 2909000;
-exports.branchedMinMcWlUpgradeMci = exports.bTestnet ? 593000 : 2909000;
-exports.otherAddressInDefinitionUpgradeMci = exports.bTestnet ? 602000 : 2909000;
-exports.attestedInDefinitionUpgradeMci = exports.bTestnet ? 616000 : 2909000;
-exports.altBranchByBestParentUpgradeMci = exports.bTestnet ? 642000 : 3009824;
-exports.anyDefinitionChangeUpgradeMci = exports.bTestnet ? 855000 : 4229100;
-exports.formulaUpgradeMci = exports.bTestnet ? Infinity : Infinity;
-exports.witnessedLevelMustNotRetreatFromAllParentsUpgradeMci = exports.bTestnet ? 909000 : Infinity;
-exports.timestampUpgradeMci = exports.bTestnet ? 909000 : Infinity;
+exports.witnessedLevelMustNotRetreatUpgradeMci  = 1400000;
+exports.spendUnconfirmedUpgradeMci = 2909000;
+exports.branchedMinMcWlUpgradeMci =  2909000;
+exports.otherAddressInDefinitionUpgradeMci =  2909000;
+exports.attestedInDefinitionUpgradeMci =  2909000;
+exports.altBranchByBestParentUpgradeMci =  3009824;
+exports.anyDefinitionChangeUpgradeMci = 4229100;
+exports.formulaUpgradeMci =  Infinity;
+exports.witnessedLevelMustNotRetreatFromAllParentsUpgradeMci = Infinity;
+exports.timestampUpgradeMci =  Infinity;
